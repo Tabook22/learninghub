@@ -1,0 +1,21 @@
+
+
+.nstlst{
+display:flex;
+justify-items: center;
+align-items: center;
+flex-direction: column;
+}
+
+
+/* this for the list item to show only three item list in a row */
+/* Your existing styles here */
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+    .container-list-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Your existing styles continue here */

@@ -1,0 +1,306 @@
+/* General Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header, .footer {
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.header {
+    height: auto; /* Adjusted to auto to accommodate the new content */
+    margin-bottom: 10px;
+}
+
+/* Nav Styles */
+.topnav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.topnav-l, .topnav-m, .topnav-r {
+    display: flex;
+    align-items: center;
+}
+
+.topnav-l {
+    padding-right: 1rem;
+    width: 100%; /* Ensure the container takes the full width */
+}
+
+.topnav-l ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.topnav-l li {
+    margin-right: 5px;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 5px 10px 5px 10px;
+    transition: background-color 0.3s, border 0.3s; /* Added for smooth transition */
+}
+
+.topnav-l li:hover {
+    /*background-color: #FFF7ED;*/
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid black;
+}
+
+.topnav-m {
+    width: 33%;
+    margin: 0;
+    padding: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topnav-m h1 {
+    font-size: 2.2rem !important;
+    margin: 0;
+    color: #000000;
+}
+
+.topnav-r {
+    width: 15%;
+    height: 60px;
+    display: flex;
+    overflow: visible; /* Added this line to allow the image to be shown outside the div */
+    justify-content: center;
+    align-items: right;
+}
+
+.imglogo {
+    width: 100px;
+    height: 100px;
+}
+
+.brd {
+    display: none; /* Hide by default */
+}
+
+@media (max-width: 767px) {
+    /* Mobile */
+    .brd {
+        display: inline;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Tablet */
+    .brd {
+        display: inline;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}
+
+.navbar-nav {
+    width: 100%;
+}
+
+.navbar-nav li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+}
+
+@media (min-width: 992px) {
+    .topnav-m {
+        display: block; /* Show the title on desktop screens */
+    }
+}
+
+/* Divider Styles */
+.gdivider {
+    height: 40px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.imgd {
+    height: 20px;
+    width: auto;
+}
+
+/* Container Styles */
+.container {
+    padding: 1rem;
+    background-color: #ffffff;
+    flex-grow: 1;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #d2d2d2;
+    display: flex;
+}
+
+.container-left, .container-right {
+    flex: 1; /* Optional: to split the container evenly */
+}
+
+/* Container Left Styles */
+.container-top {
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.container-top h2 {
+    margin: 0; /* Optional: to remove margin from h2 */
+}
+
+.container-list-items {
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.container-list-items a img {
+    width: 75px;
+    height: 75px;
+    display: block; /* To remove the default inline space below the image */
+    padding: 3px;
+    border: 1px solid #f1f1f1;
+}
+
+/* Container Right Styles */
+.container-right h3 {
+    padding-left: 50px;
+}
+
+.container-right {
+    padding: 0.8rem;
+    margin-left: 1rem;
+    border-radius: 10px;
+    border: 1px solid #d2d2d2;
+    position: relative; /* Make this a positioning context */
+}
+
+.container-right-video iframe {
+    width: 100%; /* Optional: to make the video responsive */
+    height: auto; /* Optional: to maintain the video aspect ratio */
+}
+
+.container-right img, .container-right p {
+    width: auto;
+    height: 180px;
+    display: block; /* To ensure they take up the full width available */
+}
+
+.container-right .imgco {
+    height: 180px;
+    width: auto;
+    background-image: url('../img/nr.png');
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the background image */
+    margin-bottom: 1rem;
+    padding:3px;
+    border-radius:10px;
+}
+
+.topic-circle {
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #4d4d4d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24;
+    background-color: #000;
+    color: white;
+    transform: rotate(-45deg);
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease; /* Add transition */
+}
+
+.topic-circle:hover {
+    transform: rotate(405deg); /* Rotate 360 degrees plus the initial 45 degrees */
+    background-color: red; /* Change background color to red */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.read-more {
+    color: red;
+    font-weight: bold;
+    text-decoration: none; /* Optional: to remove the underline */
+}
+
+.image-cell {
+    text-align: center;
+    /* Center the text */
+    margin-bottom: 1.2rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+.image-cell img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    /* To ensure it takes up the full width available */
+    margin: 0 auto;
+    /* Center the image horizontally */
+}
+.image-caption a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #000
+}
+
+.image-cell:hover {
+    transform: translateY(-10px);
+    /* Raise the div */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+}
+
+
+/* Footer Styles */
+.footer {
+    height: 120px;
+}
+
+.copyright {
+    line-height: 120px;
+    text-align: center;
+}

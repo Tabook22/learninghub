@@ -1,0 +1,130 @@
+
+{% extends 'home.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/css/customstyle.css"/>
+    <!-- New gdivider div -->
+    <div class="gdivider">
+        <img src="../static/img/divider6.png" alt="Description" class="imgd">
+    </div>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <div class="container" style="display:block">
+            <!-- container-left div -->
+            <div class="row flex-md-row">  <!-- Removed flex-column-reverse here -->
+                <!-- container-left div -->
+                <div class="col-12  container-left nstlst">  <!-- No change here -->
+                    <!-- container-top div -->
+                    <div class="container-top">
+                        <h2>Concepts</h2>
+                    </div>
+                    <!-- container-list div -->
+                    <div class="container-list">
+                        <!-- container-list-items div -->
+                        <div class="container-list-items">
+                            <!-- Repeat the following block for each cell -->
+                            <div class="image-cell">
+                                <a href="{{url_for('nsttopics')}}">
+                                    <img src="../static/img/icons/nc11.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="{{url_for('nsttopics')}}">Radioactive decay</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="nsttopics.html">
+                                    <img src="../static/img/icons/nc2.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="#">Nuclear reactor</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="#">
+                                    <img src="../static/img/icons/nc3.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="#">Radiation protection</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="#">
+                                    <img src="../static/img/icons/nc9.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="#">Peasful applicaitons of nuclear energy</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="#">
+                                    <img src="../static/img/icons/ico8.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="#">Occupations & professions</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="{{url_for('nisot')}}">
+                                    <img src="../static/img/icons/nc14.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="{{url_for('nisot')}}">Nuclear and isotopic studies</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="#">
+                                    <img src="../static/img/icons/nc5.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="#">Nuclear radiation</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="#">
+                                    <img src="../static/img/icons/nc8.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="#">Nuclear Assion</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="#">
+                                    <img src="../static/img/icons/nc12.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="#">Nuclear Fusion</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="#">
+                                    <img src="../static/img/icons/nc1.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="#">Half-life</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="#">
+                                    <img src="../static/img/icons/nc6.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="../templates/nsttopics.html">Radioactive activity hsitory</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="{{url_for('nsttopics')}}">
+                                    <img src="../static/img/icons/nc13.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="{{url_for('nsttopics')}}">Radiation dectection devices</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

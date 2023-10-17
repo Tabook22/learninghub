@@ -1,0 +1,160 @@
+
+{% extends 'home.html' %}
+{% block content %}
+
+<!-- sero section -->
+
+<div class="embed-responsive embed-responsive-16by9" style="margin-bottom:40px;">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AMXxXoHtM-o?autoplay=1&mute=1&modestbranding=1&controls=0&rel=0&showinfo=0" allowfullscreen></iframe>
+
+</div>
+<!-- end of hero section -->
+    <!-- New gdivider div -->
+    <div class="gdivider" style="margin-bottom:20px;">
+        <img src="../static/img/divider6.png" alt="Description" class="imgd">
+    </div>
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <div class="container">
+            <!-- container-left div -->
+            <div class="row flex-md-row">  <!-- Removed flex-column-reverse here -->
+                <!-- container-left div -->
+                <div class="col-12 col-md-6 container-left">  <!-- No change here -->
+                    <!-- container-top div -->
+                    <div class="container-top">
+                        <h2>Main List</h2>
+                    </div>
+                    <!-- container-list div -->
+                    <div class="container-list">
+                        <!-- container-list-items div -->
+                        <div class="container-list-items">
+                            <!-- Repeat the following block for each cell -->
+                            <div class="image-cell">
+                                <a href="{{url_for('nsttopics')}}">
+                                    <img src="../static/img/icons/ico11.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="{{url_for('nsttopics')}}">NTS Topics</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="{{url_for('assignment')}}">
+                                    <img src="../static/img/icons/ico10.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="{{url_for('assignment')}}">Assignment Evaluation</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="{{url_for('usersac')}}">
+                                    <img src="../static/img/icons/ico13.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="{{url_for('usersac')}}">User Accounts</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="{{url_for('surveysc')}}">
+                                    <img src="../static/img/icons/ico14.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="{{url_for('surveysc')}}">Survey Screen</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="{{url_for('chatbotsc')}}">
+                                    <img src="../static/img/icons/ico12.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="{{url_for('chatbotsc')}}">Chatbot Screen</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="{{url_for('aiedu')}}">
+                                    <img src="../static/img/icons/ico6.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="{{url_for('aiedu')}}">AI and Education</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="#">
+                                    <img src="../static/img/icons/ico5.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="#">Login</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="#">
+                                    <img src="../static/img/icons/ico4.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="#">NST APP</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="#">
+                                    <img src="../static/img/icons/ico3.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="#">Research</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="#">
+                                    <img src="../static/img/icons/ico9.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="#">Awareness of Nuclear Science</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="{{url_for('nsttopics')}}">
+                                    <img src="../static/img/icons/ico2.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="{{url_for('nsttopics')}}">Theoretical Framework</a>
+                                </div>
+                            </div>
+                            <div class="image-cell">
+                                <a href="{{url_for('ainusc')}}">
+                                    <img src="../static/img/icons/ico7.png" alt="Description">
+                                </a>
+                                <div class="image-caption">
+                                    <a href="{{url_for('ainusc')}}">Ai and Nuclear science Technology</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- container-right div -->
+                <div class="col-12 col-md-6 container-right">  <!-- No change here -->
+                    <!-- topic-circle div -->
+                    <div class="topic-circle">
+                        Selected Topic
+                    </div>
+                    <h3>Nuclear Reactor - Understanding how it works </h3>
+                    <div class="imgco"></div>
+                    <p>Nuclear reactors are the modern day devices extensively used for power generation as
+                        the traditional fossil fuels, like coal, are at the breach of extinction.
+                        A nuclear reactor is the source of intense heat which is in turn used for generation
+                        of power in nuclear power station. Its mechanism is similar to that of a furnace in
+                        a steam generator; the steam is used to drive the turbines of the electric generator system
+                        <span class="ellipsis">...</span><a href="your-link-here.html" class="read-more">read more
+                            >></a> </p>
+                    <!-- container-right-video div -->
+                    <div class="container-right-video">
+                        <iframe src="https://www.youtube.com/embed/1U6Nzcv9Vws" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+  

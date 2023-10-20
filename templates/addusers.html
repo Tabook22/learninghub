@@ -1,0 +1,91 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+    html, body {
+        height: 100%;
+    }
+    #form-container {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #form-content {
+        max-width: 30rem;
+        margin: auto;
+    }
+</style>
+
+
+<div class="container" id="form-container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6" id="form-content">  <!-- Updated column classes for responsiveness -->
+            <h2 class="my-4 text-center">Add New User</h2>  <!-- Centered text -->
+            <!-- New code: Show success alert if user was added -->
+            {% if user_added %}
+            <div class="alert alert-success" role="alert">
+                Success! New user has been added.
+            </div>
+            {% endif %}
+
+            <form action="/adduser" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" value="{{ form_data.name }}" required>
+                    
+                    {{ error_messages.get('name', '') }}
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" value="{{ form_data.email }}" required>
+
+                    {{ error_messages.get('email', '') }}
+                </div>
+                
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" class="form-control" value="{{ form_data.username }}" required>
+                    {{ error_messages.get('username', '') }}
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="form-control" value="{{ form_data.password }}" required>
+                    
+                    {% if error_messages.get('password','') %}
+                    <div class="alert alert-warning">
+                        <strong>Warning!</strong> Indicates a warning that might need attention.<br>
+                        <p style="color:red;font-weight:bold;">
+                            {{ error_messages.get('password', '') }}
+                        </p>
+                    </div>
+                {% endif %}
+                    
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" class="form-control" value="{{ form_data.confirm_password }}" required>
+                </div>
+                
+                <input type="submit" value="Submit" class="btn btn-primary btn-block">  <!-- Full-width button -->
+                {% if error_messages.get('database') %}
+                    <div class="alert alert-warning" style="margin-top:1.5rem;">
+                        <strong>Warning!</strong> Indicates a warning that might need attention.<br>
+                        <p style="color:red;font-weight:bold;">
+                            {{ error_messages.get('database', '') }}
+                        </p>
+                    </div>
+                {% endif %}
+               
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+  

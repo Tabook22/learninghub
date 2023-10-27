@@ -16,7 +16,10 @@ setting the key via an environment variable fails for some reason.
 load_dotenv()  # Load environment variables from .env file
 
 app = Flask(__name__)
+#Postgresql connection
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Tabook22@localhost/mydb'
+#mySQL connction on pythonanywhere
+#app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql+mysqldb://NasserT:Tabook22@NasserT.mysql.pythonanywhere-services.com/NasserT$mydb'
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', FALLBACK_SECRET_KEY)
 db = SQLAlchemy(app)
 
@@ -35,7 +38,7 @@ class User(db.Model):
     name = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     username = db.Column(db.String(80), unique=True, nullable=False)
-    password_hash = db.Column(db.String(128), nullable=False)
+    password_hash = db.Column(db.String(512), nullable=False)
     user_type = db.Column(db.String(50), nullable=False, default='user')
 
     
@@ -86,6 +89,7 @@ def adduser():
         if not error_messages:
             password_hash = generate_password_hash(password)
             user = User(name=name, email=email, username=username, password_hash=password_hash)
+
             try:
                 db.session.add(user)
                 db.session.commit()
@@ -93,8 +97,9 @@ def adduser():
                 #return "User added successfully!"
             except Exception as e:
                 db.session.rollback()
+                geterror=str(e)  # Print the actual exception for debugging
                 # Assume any exception is due to a duplicate username or email
-                error_messages['database'] = "An error occurred. Username or email may already be taken."
+                error_messages['database'] = geterror
         # Assume user is added successfully
         user_added = True
     return render_template('addusers.html', error_messages=error_messages,form_data=form_data, user_added=user_added)
@@ -129,7 +134,13 @@ def assignment():
     user = User.query.get(session['user_id'])
     return render_template("assignment.html", user=user)
 
-
+@app.route("/rdoact")
+def rdoact():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    user = User.query.get(session['user_id'])
+    return render_template("rdoact.html", user=user)
+    
 
 @app.route("/ussersac")
 def usersac():

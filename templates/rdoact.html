@@ -1,0 +1,96 @@
+
+{% extends 'home.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/css/customstyle.css"/>
+    <!-- New gdivider div -->
+    <div class="gdivider">
+        <img src="../static/img/divider6.png" alt="Description" class="imgd">
+    </div>
+
+    <style>
+        .video-container {
+            width: 100%;
+            max-width: 640px; /* or any other maximum width you want */
+            margin: 0 auto; /* centers the container */
+            border: 1px solid #ccc; /* optional border */
+            background-color: #000; /* optional background color */
+            overflow: hidden; /* optional: hides the overflow */
+            border-radius: 10px; /* optional: rounded corners */
+        }
+    
+        .video-container video {
+            width: 100%; /* makes the video responsive */
+            display: block;
+        }
+    
+        .video-description {
+        font-size: 1rem; /* Set font size to 1rem for better readability */
+        color: #333; /* Dark text color for better contrast */
+        margin-top: 1rem; /* Space above the paragraph for separation from the video */
+        padding: 0.5rem; /* Padding around the text for better spacing */
+        background-color: #f9f9f9; /* Light background color to offset the paragraph from the rest of the page */
+        border-radius: 8px; /* Rounded corners for a softer look */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        line-height: 1.5; /* Improved line spacing for readability */
+        max-width: 800px; /* Optional: Limit the width of the paragraph */
+        text-align: justify; /* Justify text for a cleaner look */
+    }
+
+
+
+    .video-description ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .video-description ul li {
+            padding: 5px 0;
+            border-bottom: 1px solid #e1e1e1;
+            transition: background-color 0.3s;
+        }
+
+        .video-description ul li:last-child {
+            border-bottom: none;
+        }
+
+        .video-description ul li:hover {
+            background-color: #e1e1e1;
+        }
+
+
+    </style>
+
+
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <div class="container" style="display:block">
+            <!-- container-left div -->
+            <div class="row flex-md-row">  <!-- Removed flex-column-reverse here -->
+                <!-- container-left div -->
+                <div class="col-12  container-left nstlst">  <!-- No change here -->
+                    <!-- container-top div -->
+                    <div class="container-top">
+                        <h2>Radiation protection</h2>
+                    </div>
+                    <!-- container-list div -->
+                    <div class="container-list">
+    
+                        <div class="video-container">
+                            <video controls>
+                                <source src="../static/videos/v5.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        
+
+                    
+                
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

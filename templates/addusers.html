@@ -27,6 +27,7 @@
             {% if user_added %}
             <div class="alert alert-success" role="alert">
                 Success! New user has been added.
+                <a href="{{ url_for('login') }}">Login</a>
             </div>
             {% endif %}
 
